@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BloomBridge - Empowering Every Child</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+
+
+</head>
+<body>
+  <div class="main-screen" id="main">
+    <h1>BloomBridge</h1>
+    <p style="font-size: 18px;">Empowering specially-abled children through love, care, and AI.</p>
+
+    <!--details of the child-->
+    <div class="child-profile">
+        <img src="./aman1.png" alt="Child Photo" class="child-photo" />
+        <div class="child-info">
+          <h2 class="child-name">Hi, I’m Aman</h2>
+          <p class="child-desc">Ready to explore and learn!</p>
+        </div>
+      </div>
+
+    <button onclick="navigateToSpeech()"> Speech Therapy</button>
+    <button onclick="navigateTo('emotion')">Emotion Recognition</button>
+    <button onclick="navigateTo('routine')"> Daily Routine Practice</button>
+    <button onclick="navigateTo('pictureword')">Picture to Word</button>
+    <button onclick="navigateTo('safety')">Safety & Panic Alert (CareNest)</button>
+  </div>
+  <!-- Speech Therapy -->
+  <div class="therapy-screen" id="speech-therapy" style="display: none;">
+    <h2> Let's Practice Speaking</h2>
+    <div class="card" onclick="speakWord('Apple')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" alt="Apple" width="150" />
+      <p id="word">Apple</p>
+    </div>
+    <div class="card" onclick="speakWord('Ball')">
+        <img src="./ball.jpg" alt="Ball" width="150"/>
+        <p>Ball</p>
+      </div>
+      <div class="card" onclick="speakWord('Cat')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/800px-Cat03.jpg" alt="Cat" width="150"/>
+        <p>Cat</p>
+      </div>
+      <div class="card" onclick="speakWord('Dog')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_of_Nine_Dogs.jpg" alt="Dog" width="150"/>
+        <p>Dog</p>
+      </div>
+      <div class="card" onclick="speakWord('Car')">
+        <img src="./car.avif" alt="Car" width="150" />
+        <p>Car</p>
+      </div>
+      <div class="card" onclick="speakWord('Banana')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt="Banana" width="150"/>
+        <p>Banana</p>
+      </div>
+    <button onclick="goBack()">Back</button>
+  </div>
+
+ <!-- Emotion Recognition -->
+
+  <div class="therapy-screen" id="emotion" style="display: none;">
+
+<!--emotions recognition-->
+<h2>Emotion Recognition</h2>
+
+<input type="file" id="fileInput" accept="image/*" />
+<button onclick="analyzeEmotion()">Analyze Emotion</button>
+
+<div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <h2> Emotion Recognition</h2>
+    <p>Click on the button to hear the emotion!</p>
+  
+    <div class="emotion-container">
+      <div class="emotion-card">
+        <img src="./happy.jpg" alt="Happy face" width="100">
+        <button onclick="speakEmotion('I am happy')">Happy</button>
+      </div>
+      <div class="emotion-card">
+        <img src="./sad.webp" alt="Sad face" width="100">
+        <button onclick="speakEmotion('I am sad')">Sad</button>
+      </div>
+      <div class="emotion-card">
+        <img src="./angry.jpg" alt="Angry face" width="100">
+        <button onclick="speakEmotion('I am angry')">Angry</button>
+      </div>
+      <div class="emotion-card">
+        <img src="./Surprised.webp" alt="Surprised face" width="100">
+        <button onclick="speakEmotion('I am surprised')">Surprised</button>
+      </div>
+    </div>
+    <br>
+    <button onclick="goBack()"> Back</button>
+  </div>
+
+</div>  
+  
+<!-- Daily Routine Assistant -->
+  <div class="therapy-screen" id="routine" style="display: none;">
+    <h2>Daily Routine Assistant</h2>
+    <p>Follow each step of your day. Click to hear it!</p>
+  
+    <div class="routine-container">
+      <div class="routine-step" onclick="speakRoutine('Wake up')">
+        <img src="./wakeup.webp" alt="Wake Up" />
+        <p>Wake Up</p>
+      </div>
+      <div class="routine-step" onclick="speakRoutine('Brush your teeth')">
+        <img src="./brushteeth.png" alt="Brush Teeth" />
+        <p>Brush Teeth</p>
+      </div>
+      <div class="routine-step" onclick="speakRoutine('Eat breakfast')">
+        <img src="./breakfast.webp" alt="Breakfast" />
+        <p>Eat Breakfast</p>
+      </div>
+      <div class="routine-step" onclick="speakRoutine('Go to school')">
+        <img src="./school.jpg" alt="School" />
+        <p>Go to School</p>
+      </div>
+      <div class="routine-step" onclick="speakRoutine('Play time')">
+        <img src="./playtime.webp" alt="Play" />
+        <p>Play Time</p>
+      </div>
+      <div class="routine-step" onclick="speakRoutine('Sleep')">
+        <img src="./sleep.webp" alt="Sleep" />
+        <p>Sleep</p>
+      </div>
+    </div>
+    <br />
+    <button onclick="goBack()"> Back</button>
+  </div>
+  
+<!-- Picture to Word -->
+<div class="therapy-screen" id="pictureword"  style="display: none;">
+    <h2>Picture to Word</h2>
+    <p>Click the correct word that matches the picture!</p>
+
+    <div class="quiz-section">
+      <img id="quiz-image" src="" alt="Quiz Image" />
+      <div class="options">
+        <button id="option1" onclick="checkAnswer(this.textContent)">Option 1</button>
+        <button id="option2" onclick="checkAnswer(this.textContent)">Option 2</button>
+        <button id="option3" onclick="checkAnswer(this.textContent)">Option 3</button>
+      </div>
+      <p id="feedback"></p>
+    </div>
+
+    <button onclick="goBack()">🔙 Back</button>
+  </div>
+
+  <!--Analyse emotions-->
+  <h2>💬 What Happened Today?</h2>
+<textarea id="incidentInput" placeholder="Describe the situation..." rows="5" cols="50"></textarea><br>
+<button onclick="analyzeInput()">Analyze Emotion</button>
+
+<div id="result" style="margin-top: 20px;"></div>
+
+
+  <div class="therapy-screen" id="safety" style="display: none;">
+    <h2>Safety & Panic Alert</h2>
+    <p>Powered by CareNest</p>
+    <p>Click below to access the child safety alert system.</p>
+    <a href="https://sundus-hussain.github.io/MDBot_Alert_/" target="_blank">
+      <button>Open Security Alert System</button>
+    </a>
+    <button onclick="goBack()">Back</button>
+  </div>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>

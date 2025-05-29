@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+    background: #f0f8ff;
+  }
+  .child-profile {
+    display: flex;
+    align-items: center;
+    background-color: #f5f7fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .child-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #d0e6f6;
+  }
+  
+  .child-info {
+    flex: 1;
+  }
+  
+  .child-name {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .child-desc {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #7ec8e3;
+    border: none;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .card {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff8dc;
+    border-radius: 12px;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .emotion-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .emotion-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 130px;
+  }
+  
+  .emotion-card button {
+    margin-top: 10px;
+    background-color: #8e24aa;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .emotion-card button:hover {
+    background-color: #6a1b9a;
+  }
+
+  .routine-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .routine-step {
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 10px;
+    width: 130px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .routine-step:hover {
+    transform: scale(1.05);
+  }
+  
+  .routine-step img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .routine-step p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .quiz-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .options button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .options button:hover {
+    background-color: #d2f4d2;
+  }
+  .therapy-screen {
+    display: block;
+  }
+  
+  .quiz-section img {
+    width: 150px;
+    margin: 10px 0;
+  }
+  
+  .options {
+    margin: 10px 0;
+  }
+  
+  .options button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #dceaff;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .options button:hover {
+    background-color: #b8daff;
+  }
+  
+  #feedback {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }    

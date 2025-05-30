@@ -8,7 +8,7 @@
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - Emotion detection via **Amazon SageMaker JumpStart**
 - Voice interaction using **Amazon Polly**

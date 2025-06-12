@@ -38,6 +38,12 @@
 
 ---
 
+## How AWS Lambda Was Used
+
+AWS Lambda served as the core compute layer in BloomBridge, enabling a fully serverless architecture. It executed backend logic in response to user actions and scheduled events without requiring any infrastructure management. Lambda functions were triggered via API Gateway when users submitted tribute messages or configured reminder settings. Additionally, scheduled functions—invoked through Amazon EventBridge—were used to send automated tributes or notifications on emotionally significant dates like anniversaries or birthdays.
+
+Lambda also played a key role in integrating with other AWS services: it invoked Amazon Polly to convert written tributes into lifelike speech, and called Amazon SageMaker endpoints to generate personalized sympathy messages using AI. All execution data and logs were captured via Amazon CloudWatch for observability and debugging. This event-driven design allowed BloomBridge to scale effortlessly, reduce costs, and offer a deeply personalized experience to users.
+
 ## Getting Started
 
 1. **Clone the repo:**
